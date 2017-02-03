@@ -1,10 +1,12 @@
-var express = require('express');
-var app = express();
+var app = require('./app');
+var config = require('./config');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+const port = config.webservice.port;
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, (err) => {
+    if (err) {
+        return console.log('something bad happened', err)
+    }
+
+    console.log(`server is listening on ${port}`)
 });
