@@ -5,10 +5,10 @@ const config = {};
  */
 if (process.env.ENV == 'prod') {
     config.mongo = {
-        url: 'mongodb://prod/fit360'
+        url: 'https://fit360.documents.azure.com:443/'
     };
     config.webservice = {
-        port: '8080'
+        port: '80'
     };
 } else {
     config.mongo = {
