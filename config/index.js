@@ -5,7 +5,7 @@ const config = {};
  */
 if (process.env.ENV == 'prod') {
     config.mongo = {
-        url: 'https://fit360.documents.azure.com:443/'
+        url: 'mongodb://fit360:tyTvzpBaESNRwi2UYUQQmihScxxOqNg9xrghxWX1gS1c218zWnyrtxxHxeUw819FxjSwXxF87sgp7HBBhRfPug==@fit360.documents.azure.com:10250/?ssl=true'
     };
     config.webservice = {
         port: '80'
