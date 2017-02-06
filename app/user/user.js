@@ -15,7 +15,8 @@ const createUser = (request, response, next) => {
 
 const helloWorld = (request, response, next) => {
     response.json({
-        message : 'Hello World!'
+        message : 'Hello World!',
+        data : 'this could be data'
     })
 }
 
