@@ -10,7 +10,11 @@ const initUser = (app) => {
 const createUser = (request, response, next) => {
     let newUser = new userModel(request.body);
     newUser.save();
-    response.send(newUser._id);
+    let resObj = {
+        "userid" : newUser._id,
+        "status" : "success"
+    }
+    response.send(resObj);
 }
 
 const helloWorld = (request, response, next) => {
